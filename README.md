@@ -10,7 +10,7 @@
 
 ## Note
 
-### Fail to sign xpi on CircleCI
+### Fail to release on CircleCI
 
 * Visit CircleCI page
 * Debug via SSH
