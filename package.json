@@ -1,19 +1,56 @@
 {
-  "title": "My Jetpack Addon",
   "name": "firefox-build-link-markdown",
+  "description": "Build a markdown link from the selected text or the current page's title.",
   "version": "0.0.1",
-  "description": "A basic add-on",
-  "main": "index.js",
-  "author": "sanemat",
+  "author": {
+    "name": "sanemat",
+    "email": "o.gata.ken@gmail.com",
+    "url": "sane.jp"
+  },
+  "dependencies": {
+    "get-firefox-browser-window": "^2.0.0",
+    "is-firefox-android": "^2.0.0"
+  },
+  "devDependencies": {
+    "conventional-changelog": "^0.5.3",
+    "cpy": "^4.0.0",
+    "cross-spawn-async": "^2.1.8",
+    "eclint": "^1.1.5",
+    "eslint": "^1.10.3",
+    "eslint-config-airbnb": "^4.0.0",
+    "fixpack": "^2.2.0",
+    "glob": "^6.0.4",
+    "globstar": "^1.0.0",
+    "jpm": "^1.0.4",
+    "jpm-mobile": "github:dogwalk/jpm-mobile#patched",
+    "mkdirp": "^0.5.1",
+    "npm-check-updates": "^2.5.7",
+    "pify": "^2.3.0",
+    "rimraf": "^2.5.1",
+    "yargs": "^3.32.0"
+  },
   "engines": {
     "firefox": ">=38.0a1",
     "fennec": ">=38.0a1"
   },
-  "license": "MIT",
   "keywords": [
     "jetpack"
   ],
-  "devDependencies": {
-    "jpm": "^1.0.5"
-  }
+  "license": "MIT",
+  "main": "index.js",
+  "repository": "dogwalk/firefox-build-link-markdown",
+  "scripts": {
+    "changelog": "conventional-changelog -i changelog.md --overwrite --preset angular",
+    "eclint": "globstar --ignore \"node_modules/**\" -- eclint check \"*.{js,yml,md,json}\"",
+    "eslint": "eslint --ext .js data test index.js bin lib",
+    "fixpack": "fixpack",
+    "git:tag": "git tag v${npm_package_version}",
+    "lint": "npm run eclint && npm run eslint",
+    "ncu": "ncu -u",
+    "start": "jpm run",
+    "start:mobile": "jpm-mobile run -b firefox",
+    "test": "jpm test",
+    "verify": "npm run lint && npm run test"
+  },
+  "title": "Build Link Markdown"
 }

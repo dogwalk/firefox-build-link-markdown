@@ -1,4 +1,4 @@
-self.port.on('buildLinkPlain', () => {
+self.port.on('buildLinkMarkdown', () => {
   const selected = window.getSelection().toString();
   const title = window.document.title;
   const url = window.location.href;
