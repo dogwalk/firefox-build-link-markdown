@@ -4,10 +4,10 @@ self.port.on('buildLinkMarkdown', () => {
   const url = window.location.href;
   const result = [];
   if (selected) {
-    result.push(selected);
+    result.push(`[${selected}]`);
   } else {
-    result.push(title);
+    result.push(`[${title}]`);
   }
-  result.push(url);
-  self.port.emit('copyToSystem', result.join(' '));
+  result.push(`(${url})`);
+  self.port.emit('copyToSystem', result.join(''));
 });
