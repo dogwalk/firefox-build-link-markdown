@@ -12,5 +12,8 @@
   "license": "MIT",
   "keywords": [
     "jetpack"
-  ]
+  ],
+  "devDependencies": {
+    "jpm": "^1.0.5"
+  }
 }
