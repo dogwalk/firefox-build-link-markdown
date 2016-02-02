@@ -1,0 +1,15 @@
+# https://travis-ci.org/
+language: node_js
+node_js:
+  - '5'
+script: 'npm run verify'
+install:
+  - 'travis_retry npm install'
+addons:
+  firefox: 'latest'
+env:
+  global:
+    - DISPLAY=:99.0
+    - JPM_FIREFOX_BINARY=/usr/local/bin/firefox
+before_install:
+  - sh -e /etc/init.d/xvfb start

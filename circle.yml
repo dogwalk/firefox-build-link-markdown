@@ -1,0 +1,17 @@
+machine:
+  node:
+    version: 5
+test:
+  override:
+    - npm run lint
+deployment:
+  release:
+    tag: /v?[0-9]+.*/
+    commands:
+      - npm run release
+general:
+  branches:
+    ignore:
+      - /.*/
+  artifacts:
+    - "dist/pkg"
