@@ -19,7 +19,6 @@
     "eslint": "^1.10.3",
     "eslint-config-airbnb": "^4.0.0",
     "fixpack": "^2.2.0",
-    "glob": "^6.0.4",
     "globstar": "^1.0.0",
     "jpm": "^1.0.4",
     "jpm-mobile": "github:dogwalk/jpm-mobile#patched",
@@ -40,6 +39,11 @@
   "main": "index.js",
   "repository": "dogwalk/firefox-build-link-markdown",
   "scripts": {
+    "build:addon": "npm run build:clean && npm run build:copy && npm run build:install && npm run build:xpi",
+    "build:clean": "bin/build-clean.js",
+    "build:copy": "bin/build-copy.js",
+    "build:install": "bin/build-install.js",
+    "build:xpi": "bin/build-xpi.js",
     "changelog": "conventional-changelog -i changelog.md --overwrite --preset angular",
     "eclint": "globstar --ignore \"node_modules/**\" -- eclint check \"*.{js,yml,md,json}\"",
     "eslint": "eslint --ext .js data test index.js bin lib",
@@ -47,10 +51,11 @@
     "git:tag": "git tag v${npm_package_version}",
     "lint": "npm run eclint && npm run eslint",
     "ncu": "ncu -u",
+    "release": "npm run build:addon && ./bin/release-circleci.js",
     "start": "jpm run",
     "start:mobile": "jpm-mobile run -b firefox",
     "test": "jpm test",
-    "verify": "npm run lint && npm run test"
+    "verify": "npm run lint && npm run test && npm run build:addon"
   },
   "title": "Build Link Markdown"
 }
