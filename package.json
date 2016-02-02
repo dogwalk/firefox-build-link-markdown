@@ -1,0 +1,16 @@
+{
+  "title": "My Jetpack Addon",
+  "name": "firefox-build-link-markdown",
+  "version": "0.0.1",
+  "description": "A basic add-on",
+  "main": "index.js",
+  "author": "sanemat",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "jetpack"
+  ]
+}
