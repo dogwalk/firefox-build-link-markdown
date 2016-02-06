@@ -1,5 +1,7 @@
 self.port.on('buildLinkMarkdown', () => {
-  const selected = window.getSelection().toString();
+  /* global browserSelectedText:false */
+  // browser-selected-text https://www.npmjs.com/package/browser-selected-text
+  const selected = browserSelectedText();
   const title = window.document.title;
   const url = window.location.href;
   const result = [];
