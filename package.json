@@ -13,12 +13,12 @@
     "is-firefox-android": "^2.0.0"
   },
   "devDependencies": {
-    "conventional-changelog": "^0.5.3",
+    "conventional-changelog": "^1.0.1",
     "cpy": "^4.0.0",
     "cross-spawn-async": "^2.1.8",
     "eclint": "^1.1.5",
     "eslint": "^1.10.3",
-    "eslint-config-airbnb": "^4.0.0",
+    "eslint-config-airbnb": "^5.0.0",
     "fixpack": "^2.2.0",
     "globstar": "^1.0.0",
     "jpm": "^1.0.4",
@@ -45,7 +45,7 @@
     "build:copy": "bin/build-copy.js",
     "build:install": "bin/build-install.js",
     "build:xpi": "bin/build-xpi.js",
-    "changelog": "conventional-changelog -i changelog.md --overwrite --preset angular",
+    "changelog": "conventional-changelog -i changelog.md --same-file --preset angular",
     "eclint": "globstar --ignore \"node_modules/**\" -- eclint check \"*.{js,yml,md,json}\"",
     "eslint": "eslint --ext .js data test index.js bin lib",
     "fixpack": "fixpack",
