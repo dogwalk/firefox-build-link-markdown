@@ -13,12 +13,12 @@
     "is-firefox-android": "^2.0.0"
   },
   "devDependencies": {
-    "conventional-changelog": "^0.5.3",
+    "conventional-changelog": "^1.0.1",
     "cpy": "^4.0.0",
     "cross-spawn-async": "^2.1.8",
     "eclint": "^1.1.5",
     "eslint": "^1.10.3",
-    "eslint-config-airbnb": "^4.0.0",
+    "eslint-config-airbnb": "^5.0.0",
     "fixpack": "^2.2.0",
     "globstar": "^1.0.0",
     "jpm": "^1.0.4",
